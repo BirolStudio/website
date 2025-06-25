@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yönetici Paneli</title>
+</head>
+<body>
+  <h1>Yönetici Paneli</h1>
+  
+  <h2>Oyunlar</h2>
+  <table id="gamesTable">
+    <thead>
+      <tr>
+        <th>İsim</th>
+        <th>Etiketler</th>
+        <th>Görsel</th>
+        <th>Aksiyon</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Oyunlar buraya eklenecek -->
+    </tbody>
+  </table>
+
+  <h2>Yeni Oyun Ekle</h2>
+  <form id="addGameForm">
+    <input type="text" id="gameName" placeholder="Oyun Adı" required><br>
+    <textarea id="gameDescription" placeholder="Açıklama" required></textarea><br>
+    <input type="text" id="gameTags" placeholder="Etiketler (virgülle ayrılacak)" required><br>
+    <input type="url" id="gameImage" placeholder="Görsel URL" required><br>
+    <input type="url" id="gameLink" placeholder="Oyun Linki" required><br>
+    <button type="submit">Ekle</button>
+  </form>
+
+  <script>
+    // JSON dosyasını al
+    let gamesData = {
+      "games": [
+        {
+          "id": 1,
+          "name": "Paradox Nightmare",
+          "tags": ["Korku", "3D", "FPS", "Tek Oyunculu", "Unity", "C#"],
+          "description": "Korku oyunu",
+          "image": "https://img.itch.zone/aW1nLzEyNTYxODY4LnBuZw==/315x250%23c/IMpdcr.png",
+          "link": "https://birolstudio.itch.io/paradox-nightmare"
+        },
+        {
+          "id": 2,
+          "name": "Apples Falling",
+          "tags": ["Macera", "2D", "Platform", "Tek Oyunculu", "Unity", "C#"],
+          "description": "Macera oyunudur",
+          "image": "https://img.itch.zone/aW1nLzYyNjQwMDIucG5n/315x250%23c/rpVD78.png",
+          "link": "https://birolstudio.itch.io/apples-falling"
+        }
+      ]
+    };
+
+    // Oyunları göster
+    function displayGames() {
+      const tableBody = document.getElementById('gamesTable').getElementsByTagName('tbody')[0];
+      tableBody.innerHTML = '';  // Mevcut oyunları temizle
+
+      gamesData.games.forEach(game => {
+        const row = tableBody.insertRow();
+        row.innerHTML = `
+          <td>${game.name}</td>
+          <td>${game.tags.join(', ')}</td>
+          <td><img src="${game.image}" alt="${game.name}" width="50"></td>
+          <td>
+            <button onclick="deleteGame(${game.id})">Sil</button>
+          </td>
+        `;
+      });
+    }
+
+    // Oyun ekle
+    document.getElementById('addGameForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const gameName = document.getElementById('gameName').value;
+      const gameDescription = document.getElementById('gameDescription').value;
+      const gameTags = document.getElementById('gameTags').value.split(',');
+      const gameImage = document.getElementById('gameImage').value;
+      const gameLink = document.getElementById('gameLink').value;
+
+      const newGame = {
+        id: gamesData.games.length + 1,
+        name: gameName,
+        tags: gameTags,
+        description: gameDescription,
+        image: gameImage,
+        link: gameLink
+      };
+
+      gamesData.games.push(newGame);
+      displayGames();  // Yeni oyunları göster
+    });
+
+    // Oyun silme
+    function deleteGame(gameId) {
+      gamesData.games = gamesData.games.filter(game => game.id !== gameId);
+      displayGames();  // Yeni oyunları göster
+    }
+
+    // Sayfa yüklendiğinde oyunları göster
+    displayGames();
+  </script>
+</body>
+</html>

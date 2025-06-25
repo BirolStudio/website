@@ -1,0 +1,20 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "name": "Paradox Nightmare",
+      "tags": ["Korku", "3D", "FPS", "Tek Oyunculu", "Unity", "C#"],
+      "description": "Korku oyunu",
+      "image": "https://img.itch.zone/aW1nLzEyNTYxODY4LnBuZw==/315x250%23c/IMpdcr.png",
+      "link": "https://birolstudio.itch.io/paradox-nightmare"
+    },
+    {
+      "id": 2,
+      "name": "Apples Falling",
+      "tags": ["Macera", "2D", "Platform", "Tek Oyunculu", "Unity", "C#"],
+      "description": "Macera oyunudur",
+      "image": "https://img.itch.zone/aW1nLzYyNjQwMDIucG5n/315x250%23c/rpVD78.png",
+      "link": "https://birolstudio.itch.io/apples-falling"
+    }
+  ]
+}
