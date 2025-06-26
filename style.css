@@ -65,6 +65,22 @@ nav ul li a:hover {
   color: #4CAF50;
 }
 
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  align-self: center;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
 /* Arama bölümü */
 div form {
   max-width: 800px;
@@ -115,6 +131,24 @@ div form button:hover {
   background-color: #3e8e41;
 }
 
+div form {
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+div form input, 
+div form select {
+  flex: 1 1 100%;
+}
+
+div form button, 
+.temizle {
+  flex: 1 1 48%;
+}
 
 .temizle{
   border-radius: 10px;
@@ -198,6 +232,9 @@ div form button:hover {
 #Oyunlar button:hover {
   background-color: #3e8e41;
 }
+
+
+
 
 /* Butonları sayfanın en alt kısmına yerleştirmek için */
 #Oyunlar .footer-buttons {
