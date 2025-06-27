@@ -147,10 +147,10 @@
           div.style.display = 'flex';
 
           div.innerHTML = `
-            <img src="${oyun.resim}" alt="${oyun.isim} Görseli">
+            <img src="${oyun.resim}" alt="${oyun.img} Görseli">
             <h2>${oyun.isim}</h2>
             <p>${oyun.etiket}</p>
-            <button onclick="window.location.href='${oyun.sayfa}'">Daha fazla bilgi</button>
+            <button onclick="window.location.href='${oyun.link}'">Daha fazla bilgi</button>
           `;
 
           oyunlarDiv.appendChild(div);
