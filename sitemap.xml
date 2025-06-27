@@ -6,27 +6,27 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://birolstudio.github.io/website/games.html</loc>
+  <loc>https://birolcosgun.netlify.app/</loc>
   <lastmod>2025-06-26T12:26:36+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://birolstudio.github.io/website/index.html</loc>
+  <loc>https://birolcosgun.netlify.app/games.html</loc>
   <lastmod>2025-06-26T12:26:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://birolstudio.github.io/website/paradox-nightmare.html</loc>
+  <loc>https://birolcosgun.netlify.app/birolcosgun.html</loc>
   <lastmod>2025-06-26T12:26:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://birolstudio.github.io/website/saddy-flappy.html</loc>
+  <loc>https://birolcosgun.netlify.app/paradox-nightmare.html</loc>
   <lastmod>2025-06-26T12:26:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://birolstudio.github.io/website/saddy-flappy.html</loc>
+  <loc>https://birolcosgun.netlify.app/saddy-flappy.html</loc>
   <lastmod>2025-06-26T12:26:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
