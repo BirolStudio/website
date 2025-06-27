@@ -681,3 +681,66 @@ footer code {
 .diger-oyun-btn:hover {
   background-color: #3e8e41;
 }
+
+/* Birol Coşgun Sayfası için Özel Stil */
+
+.profil {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+.profil-foto {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #4CAF50;
+}
+
+.profil h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.profil h2 {
+    font-size: 1.2rem;
+    color: #9acd32;
+}
+
+.profil p {
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+.bilgi {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.bilgi h2 {
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+.bilgi ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.bilgi p a {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+nav .active {
+    color: #4CAF50;
+    font-weight: bold;
+}
