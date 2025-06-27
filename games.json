@@ -6,6 +6,12 @@
     "link": "paradox-nightmare.html"
   },
   {
+    "isim": "Town of The Birol",
+    "etiket": "2D, Macera, Tek Oyunculu, Skor Tablosu, Pixel Art, Strateji, Unity, C#, Windows, WebGL",
+    "img": "https://img.itch.zone/aW1nLzIwNjg4NTA5LmpwZw==/315x250%23c/peL9gt.jpg",
+    "link": "https://birolstudio.itch.io/town-of-the-birol"
+  },
+  {
     "isim": "Apples Falling",
     "etiket": "Macera, 2D, Platform, Tek Oyunculu, Speedrun, Unity, C#, Windows",
     "img": "https://img.itch.zone/aW1nLzYyNjQwMDIucG5n/315x250%23c/rpVD78.png",
@@ -59,4 +65,5 @@
     "img": "https://img.itch.zone/aW1nLzYyNzUzNjguanBn/315x250%23c/r03CHz.jpg",
     "link": "https://birolstudio.itch.io/"
   }
+
 ]
