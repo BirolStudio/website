@@ -80,15 +80,8 @@
 
 
 		</div>
-		<form class="contactForm" name="contact" method="POST" data-netlify="true">
-			<input type="hidden" name="form-name" value="contact">
-
-			<p style="display:none;">
-				<label>Bot Kontrol: <input name="bot-field"></label>
-			</p>
-
+		<form class="contactForm" name="contact" netlify>
 			<h3>İletişim Formu</h3>
-
 			<input type="text" id="name" name="name" placeholder="İsim" required>
 			<input type="email" id="email" name="email" placeholder="E-mail" required>
 			<textarea id="message" name="message" placeholder="Konu" required></textarea>
@@ -105,38 +98,41 @@
 
 	<script type="text/javascript" src="script.js"></script>
 	<script>
-		async function oyunlariYukle() {
-			try {
-				const response = await fetch('games.json');
-				if (!response.ok) throw new Error('JSON dosyası yüklenemedi');
-				const oyunlar = await response.json();
+    async function oyunlariYukle() {
+        try {
+            const response = await fetch('games.json');
+            if (!response.ok) throw new Error('JSON dosyası yüklenemedi');
+            const oyunlar = await response.json();
 
-				const oyunlarContainer = document.getElementById('Oyunlar');
-				oyunlarContainer.innerHTML = '<h1>Öne Çıkanlar</h1>';
+            const oyunlarContainer = document.getElementById('Oyunlar');
+            oyunlarContainer.innerHTML = '<h1>Öne Çıkanlar</h1>';
 
-				oyunlar.forEach(oyun => {
-					const div = document.createElement('div');
-					div.classList.add('oyun');
-					div.dataset.isim = oyun.isim;
-					div.dataset.etiket = oyun.etiket;
+            // Rastgele 3 oyun seç
+            const rastgeleOyunlar = oyunlar.sort(() => 0.5 - Math.random()).slice(0, 3);
 
-					div.innerHTML = `
-        <img src="${oyun.img}" alt="${oyun.isim} Görseli">
-        <h2>${oyun.isim}</h2>
-        <p>${oyun.etiket}</p>
-        <button onclick="window.location.href='${oyun.link}'">Daha fazla bilgi</button>
-					`;
+            rastgeleOyunlar.forEach(oyun => {
+                const div = document.createElement('div');
+                div.classList.add('oyun');
+                div.dataset.isim = oyun.isim;
+                div.dataset.etiket = oyun.etiket;
 
-					oyunlarContainer.appendChild(div);
-				});
+                div.innerHTML = `
+                    <img src="${oyun.img}" alt="${oyun.isim} Görseli">
+                    <h2>${oyun.isim}</h2>
+                    <p>${oyun.etiket}</p>
+                    <button onclick="window.location.href='${oyun.link}'">Daha fazla bilgi</button>
+                `;
 
-			} catch (error) {
-				console.error('Hata:', error);
-			}
-		}
+                oyunlarContainer.appendChild(div);
+            });
 
-		window.onload = oyunlariYukle;
+        } catch (error) {
+            console.error('Hata:', error);
+        }
+    }
 
-	</script>
+    window.onload = oyunlariYukle;
+</script>
+
 </body>
 </html>
