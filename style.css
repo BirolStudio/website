@@ -685,62 +685,222 @@ footer code {
 /* Birol Coşgun Sayfası için Özel Stil */
 
 .profil {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #1e1e1e;
-    color: #f5f5f5;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #1e1e1e;
+  color: #f5f5f5;
 }
 
 .profil-foto {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 3px solid #4CAF50;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #4CAF50;
 }
 
 .profil h1 {
-    font-size: 2rem;
-    margin: 10px 0;
+  font-size: 2rem;
+  margin: 10px 0;
 }
 
 .profil h2 {
-    font-size: 1.2rem;
-    color: #9acd32;
+  font-size: 1.2rem;
+  color: #9acd32;
 }
 
 .profil p {
-    max-width: 600px;
-    margin: 20px auto;
-    line-height: 1.6;
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.6;
 }
 
 .bilgi {
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #2c2c2c;
-    color: #f5f5f5;
-    border-radius: 10px;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+  border-radius: 10px;
 }
 
 .bilgi h2 {
-    color: #4CAF50;
-    margin-top: 20px;
+  color: #4CAF50;
+  margin-top: 20px;
 }
 
 .bilgi ul {
-    list-style: disc;
-    padding-left: 20px;
+  list-style: disc;
+  padding-left: 20px;
 }
 
 .bilgi p a {
-    color: #4CAF50;
-    text-decoration: underline;
+  color: #4CAF50;
+  text-decoration: underline;
 }
 
 nav .active {
-    color: #4CAF50;
-    font-weight: bold;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+
+/* Mobil ekranlar için özel düzenlemeler */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 0.8rem;
+    border-bottom: 1px solid #333;
+  }
+
+
+  nav div a {
+    font-size: 1.1rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-form input,
+  .search-form select {
+    min-width: unset;
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  #Oyunlar h1,
+  #Nasil h1,
+  #iletisim h1 {
+    font-size: 1.7rem;
+  }
+
+  #Nasil h2 {
+    font-size: 1.2rem;
+  }
+
+  #Nasil p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Çok küçük ekranlar için */
+@media (max-width: 480px) {
+  nav {
+    padding: 1rem 3%;
+  }
+
+  .search-container {
+    margin: 1rem auto;
+  }
+
+  #Oyunlar,
+  #Nasil {
+    margin: 2rem auto;
+  }
+
+  .oyun-content {
+    padding: 1rem;
+  }
+
+  .oyun h2 {
+    font-size: 1.1rem;
+  }
+
+  .oyun p {
+    font-size: 0.85rem;
+  }
+
+  .tum-oyunlar {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tablet için orta boyut ayarları */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Büyük ekranlar için */
+@media (min-width: 1025px) {
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #2b2b2b;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 0.8rem;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contactForm textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.contactForm button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contactForm button:hover {
+  background-color: #45a049;
 }

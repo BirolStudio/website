@@ -10,29 +10,29 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 
     <!-- Yapılandırılmış Veri -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Birol Coşgun",
-        "image": "https://birolstudio.github.io/website/birol-cosgun-profil.jpeg",
-        "url": "https://birolstudio.github.io/website/birolcosgun.html",
-        "sameAs": [
-            "https://birolstudio.itch.io/",
-            "https://github.com/BirolStudio",
-            "https://www.linkedin.com/in/birol-cosgun-a6aa89360/?originalSubdomain=tr"
-        ],
-        "jobTitle": "Bağımsız Oyun Geliştirici",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "BirolStudio"
-        },
-        "knowsAbout": ["Unity", "C#", "Oyun Tasarımı", "2D Oyunlar", "3D Oyunlar", "Klötze Technic", "Birol COŞGUN"]
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Birol Coşgun",
+            "image": "https://birolstudio.github.io/website/birol-cosgun-profil.jpeg",
+            "url": "https://birolstudio.github.io/website/birolcosgun.html",
+            "sameAs": [
+                "https://birolstudio.itch.io/",
+                "https://github.com/BirolStudio",
+                "https://www.linkedin.com/in/birol-cosgun-a6aa89360/?originalSubdomain=tr"
+            ],
+            "jobTitle": "Bağımsız Oyun Geliştirici",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "BirolStudio"
+            },
+            "knowsAbout": ["Unity", "C#", "Oyun Tasarımı", "2D Oyunlar", "3D Oyunlar", "Klötze Technic", "Birol COŞGUN"]
+        }
     </script>
 </head>
 <body>
@@ -67,6 +67,22 @@
         <h2>İletişim</h2>
         <p>E-posta :<a href="mailto:birolcosgun42@gmail.com"> birolcosgun42@gmail.com</a></p>
     </section>
+
+    <form class="contactForm" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        
+        <p style="display:none;">
+            <label>Bot Kontrol: <input name="bot-field"></label>
+        </p>
+
+        <h3>İletişim Formu</h3>
+
+        <input type="text" id="name" name="name" placeholder="İsim" required>
+        <input type="email" id="email" name="email" placeholder="E-mail" required>
+        <textarea id="message" name="message" placeholder="Konu" required></textarea>
+
+        <button type="submit">Gönder</button>
+    </form>
 
     <footer>
         <p>2025 Birol Coşgun</p>

@@ -1,20 +1,62 @@
-{
-  "games": [
-    {
-      "id": 1,
-      "name": "Paradox Nightmare",
-      "tags": ["Korku", "3D", "FPS", "Tek Oyunculu", "Unity", "C#"],
-      "description": "Korku oyunu",
-      "image": "https://img.itch.zone/aW1nLzEyNTYxODY4LnBuZw==/315x250%23c/IMpdcr.png",
-      "link": "https://birolstudio.itch.io/paradox-nightmare"
-    },
-    {
-      "id": 2,
-      "name": "Apples Falling",
-      "tags": ["Macera", "2D", "Platform", "Tek Oyunculu", "Unity", "C#"],
-      "description": "Macera oyunudur",
-      "image": "https://img.itch.zone/aW1nLzYyNjQwMDIucG5n/315x250%23c/rpVD78.png",
-      "link": "https://birolstudio.itch.io/apples-falling"
-    }
-  ]
-}
+[
+  {
+    "isim": "Paradox Nightmare",
+    "etiket": "Korku, 3D, Fps, Tek Oyunculu, Hikaye, Unity, C#, Windows",
+    "img": "https://img.itch.zone/aW1nLzEyNTYxODY4LnBuZw==/315x250%23c/IMpdcr.png",
+    "link": "paradox-nightmare.html"
+  },
+  {
+    "isim": "Apples Falling",
+    "etiket": "Macera, 2D, Platform, Tek Oyunculu, Speedrun, Unity, C#, Windows",
+    "img": "https://img.itch.zone/aW1nLzYyNjQwMDIucG5n/315x250%23c/rpVD78.png",
+    "link": "https://birolstudio.itch.io/"
+  },
+  {
+    "isim": "Saddy Flappy",
+    "etiket": "Macera, 2D, Flappy Bird, Tek Oyunculu, Hikaye, Unity, C#, Android, Pixel Art, Skor Tablosu",
+    "img": "https://img.itch.zone/aW1nLzE3MzQxNjkwLnBuZw==/315x250%23c/LQVKFL.png",
+    "link": "saddy-flappy.html"
+  },
+  {
+    "isim": "Tower Defense 2D",
+    "etiket": "Strateji, 2D, Tower Defense, Tek Oyunculu, Unity, C#, Windows",
+    "img": "https://img.itch.zone/aW1nLzE0ODgyNzQzLnBuZw==/315x250%23c/bOdQa%2F.png",
+    "link": "https://birolstudio.itch.io/"
+  },
+  {
+    "isim": "Taş Kağıt Makas! Simülatörü",
+    "etiket": "Eğlence, 2D, Simülasyon, Tek Oyunculu, Unity, C#, Windows",
+    "img": "https://img.itch.zone/aW1nLzE0ODgxOTQzLnBuZw==/315x250%23c/LNhLbT.png",
+    "link": "https://birolstudio.itch.io/"
+  },
+  {
+    "isim": "Scavenger Simulator",
+    "etiket": "Simülasyon, 3D, Macera, Tek Oyunculu, Unity, C#, Windows",
+    "img": "https://img.itch.zone/aW1nLzExMTkyNzI3LnBuZw==/315x250%23c/bVcfMn.png",
+    "link": "https://birolstudio.itch.io/"
+  },
+  {
+    "isim": "BOS",
+    "etiket": "Aksiyon, 2D, Platform, Tek Oyunculu, Çok Oyunculu, Strateji, İki Kişilik, Unity, C#, Windows",
+    "img": "https://img.itch.zone/aW1nLzEwNjkwNTQzLnBuZw==/315x250%23c/NbKTgO.png",
+    "link": "https://birolstudio.itch.io/"
+  },
+  {
+    "isim": "The Bakery",
+    "etiket": "Korku, 3D, Hikaye, Tek Oyunculu, Unity, C#, Windows",
+    "img": "https://img.itch.zone/aW1nLzk5NzUxMTUucG5n/315x250%23c/OaoTB8.png",
+    "link": "https://birolstudio.itch.io/"
+  },
+  {
+    "isim": "The Metaverse",
+    "etiket": "Platform, Macera, 2D, Tek Oyunculu, Unity, C#, Windows",
+    "img": "https://img.itch.zone/aW1nLzk1ODkzNjQucG5n/315x250%23c/josTAv.png",
+    "link": "https://birolstudio.itch.io/"
+  },
+  {
+    "isim": "Valorant Case Simulator",
+    "etiket": "Kasa Açma, Simülasyon, 2D, Eğlence, Tek Oyunculu, Unity, C#, Windows",
+    "img": "https://img.itch.zone/aW1nLzYyNzUzNjguanBn/315x250%23c/r03CHz.jpg",
+    "link": "https://birolstudio.itch.io/"
+  }
+]
