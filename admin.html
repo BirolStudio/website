@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Oyun JSON Üretici</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; }
+        input, textarea { width: 100%; margin: 5px 0; padding: 8px; }
+        button { padding: 10px 15px; margin-top: 10px; }
+        pre { background: #f4f4f4; padding: 10px; white-space: pre-wrap; }
+    </style>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    
+</head>
+<body>
+
+    <h2>Yeni Oyun JSON Üretici</h2>
+    <input type="text" id="isim" placeholder="Oyun İsmi">
+    <input type="text" id="etiket" placeholder="Etiketler (virgülle ayır)">
+    <input type="text" id="img" placeholder="Görsel Linki">
+    <input type="text" id="link" placeholder="Oyun Linki">
+    <button onclick="jsonUret()">JSON Oluştur</button>
+
+    <h3>Oluşan JSON:</h3>
+    <pre id="jsonOutput">{}</pre>
+
+    <script>
+        function jsonUret() {
+            const isim = document.getElementById('isim').value.trim();
+            const etiket = document.getElementById('etiket').value.trim();
+            const img = document.getElementById('img').value.trim();
+            const link = document.getElementById('link').value.trim();
+
+            if (!isim || !etiket || !img || !link) {
+                alert("Lütfen tüm alanları doldurun.");
+                return;
+            }
+
+            const jsonObj = {
+                isim: isim,
+                etiket: etiket,
+                img: img,
+                link: link
+            };
+
+            document.getElementById('jsonOutput').textContent = JSON.stringify(jsonObj, null, 2);
+        }
+    </script>
+
+</body>
+</html>

@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="style.css?v=2">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 </head>
 <body>
   <header>
@@ -62,7 +62,7 @@
     <div class="oyun-icerik">
       <div class="oyun-galeri">
         <div class="ana-gorsel">
-          <img src="https://img.itch.zone/aW1nLzE3MzQxNjkwLnBuZw==/315x250%23c/LQVKFL.png" alt="Saddy Flappy Ana Görsel">
+          <img class="lightbox-trigger" src="https://img.itch.zone/aW1nLzE3MzQxNjkwLnBuZw==/315x250%23c/LQVKFL.png" alt="Saddy Flappy Ana Görsel">
         </div>
         <div class="mini-gorseller">
           <img src="https://img.itch.zone/aW1hZ2UvMjg5ODgxNy8xNzM0MTczNy5wbmc=/original/2aQCpn.png" alt="Ekran Görüntüsü 1">
@@ -165,6 +165,10 @@
   <footer>
     <p>Birol Coşgun 2025 <a href="https://birolstudio.itch.io/" target="_blank"><code>itch.io</code></a></p>
   </footer>
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Büyütülmüş Görsel">
+  </div>
 
   <script type="text/javascript" src="script.js"></script>
 </body>

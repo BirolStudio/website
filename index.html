@@ -7,7 +7,7 @@
 	<meta name="description" content="Birol Coşgun tarafından geliştirilen 2D, 3D ve simülasyon oyunlarını keşfedin. Ücretsiz indir, detaylı bilgi al.">
 	<meta name="keywords" content="Unity oyunları, bağımsız geliştirici, 2D oyun, 3D oyun, C# oyun, korku oyunu, simülasyon oyunu, platform oyunu, Oyun oyna, İki Kişilik Oyun oyna, Ücretsiz oyun indir, Ücretsiz oyun oyna, Birol Coşgun">
 	<meta name="author" content="Birol Coşgun">
-	<link rel="stylesheet" href="style.css?v=2">
+	<link rel="stylesheet" href="style.css?v=3">
 
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 	<meta http-equiv="Pragma" content="no-cache">
@@ -32,6 +32,10 @@
 			</ul>
 		</nav>
 	</header>
+
+	<div class="mainIMG">
+	    <img src="BirolStudio.png">
+	</div>
 
 	<div>
 		<form id="aramaForm" action="games.html" method="get">
@@ -92,47 +96,56 @@
 	</div>
 
 	<footer>
+		<a href="paradox-nightmare.html">Paradox Nighmare</a>
+		<i> | </i>
+		<a href="saddy-flappy.html">Saddy Flappy</a>
+		<br>
+		<a href="games.html">Oyunlar</a>
+		<i> | </i>
+		<a href="birolcosgun.html">Hakkında</a>
+		<br>
+		<br>
 		<p>Birol Coşgun 2025 <a href="https://birolstudio.itch.io/" target="_blank"><code>itch.io</code></a></p>
 
 	</footer>
 
 	<script type="text/javascript" src="script.js"></script>
 	<script>
-    async function oyunlariYukle() {
-        try {
-            const response = await fetch('games.json');
-            if (!response.ok) throw new Error('JSON dosyası yüklenemedi');
-            const oyunlar = await response.json();
+		async function oyunlariYukle() {
+			try {
+				const response = await fetch('games.json');
+				if (!response.ok) throw new Error('JSON dosyası yüklenemedi');
+				const oyunlar = await response.json();
 
-            const oyunlarContainer = document.getElementById('Oyunlar');
-            oyunlarContainer.innerHTML = '<h1>Öne Çıkanlar</h1>';
+				const oyunlarContainer = document.getElementById('Oyunlar');
+				oyunlarContainer.innerHTML = '<h1>Öne Çıkanlar</h1>';
 
             // Rastgele 3 oyun seç
-            const rastgeleOyunlar = oyunlar.sort(() => 0.5 - Math.random()).slice(0, 3);
+				const rastgeleOyunlar = oyunlar.sort(() => 0.5 - Math.random()).slice(0, 3);
 
-            rastgeleOyunlar.forEach(oyun => {
-                const div = document.createElement('div');
-                div.classList.add('oyun');
-                div.dataset.isim = oyun.isim;
-                div.dataset.etiket = oyun.etiket;
+				rastgeleOyunlar.forEach(oyun => {
+					const div = document.createElement('div');
+					div.classList.add('oyun');
+					div.dataset.isim = oyun.isim;
+					div.dataset.etiket = oyun.etiket;
 
-                div.innerHTML = `
+					div.innerHTML = `
                     <img src="${oyun.img}" alt="${oyun.isim} Görseli">
                     <h2>${oyun.isim}</h2>
                     <p>${oyun.etiket}</p>
                     <button onclick="window.location.href='${oyun.link}'">Daha fazla bilgi</button>
-                `;
+					`;
 
-                oyunlarContainer.appendChild(div);
-            });
+					oyunlarContainer.appendChild(div);
+				});
 
-        } catch (error) {
-            console.error('Hata:', error);
-        }
-    }
+			} catch (error) {
+				console.error('Hata:', error);
+			}
+		}
 
-    window.onload = oyunlariYukle;
-</script>
+		window.onload = oyunlariYukle;
+	</script>
 
 </body>
 </html>

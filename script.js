@@ -18,7 +18,7 @@ const categories = [
 
 
 function updateCategories() {
-        const kategoriSelect = document.getElementById('kategoriSelect');
+    const kategoriSelect = document.getElementById('kategoriSelect');
         kategoriSelect.innerHTML = ''; // Önce mevcut seçenekleri temizle
 
         categories.forEach(category => {
@@ -33,3 +33,28 @@ function updateCategories() {
     document.addEventListener('DOMContentLoaded', function() {
         updateCategories(); // Kategorileri dinamik olarak ekle
     });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeBtn = document.querySelector('.lightbox-close');
+
+      document.querySelectorAll('.mini-gorseller img').forEach(img => {
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'block';
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+      });
+    });
+
+      closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+      window.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+      }
+  });
+  });
