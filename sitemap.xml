@@ -4,33 +4,39 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 <url>
   <loc>https://birolcosgun.netlify.app/</loc>
-  <lastmod>2025-06-26T12:26:36+00:00</lastmod>
+  <lastmod>2025-06-28T11:03:49+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://birolcosgun.netlify.app/games.html</loc>
-  <lastmod>2025-06-26T12:26:36+00:00</lastmod>
+  <loc>https://birolcosgun.netlify.app/games</loc>
+  <lastmod>2025-06-28T11:03:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://birolcosgun.netlify.app/birolcosgun.html</loc>
-  <lastmod>2025-06-26T12:26:36+00:00</lastmod>
+  <loc>https://birolcosgun.netlify.app/birolcosgun</loc>
+  <lastmod>2025-06-28T11:03:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://birolcosgun.netlify.app/paradox-nightmare.html</loc>
-  <lastmod>2025-06-26T12:26:36+00:00</lastmod>
+  <loc>https://birolcosgun.netlify.app/paradox-nightmare</loc>
+  <lastmod>2025-06-28T11:03:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://birolcosgun.netlify.app/saddy-flappy.html</loc>
-  <lastmod>2025-06-26T12:26:36+00:00</lastmod>
+  <loc>https://birolcosgun.netlify.app/saddy-flappy</loc>
+  <lastmod>2025-06-28T11:03:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>https://birolcosgun.netlify.app/index.html</loc>
+  <lastmod>2025-06-28T11:03:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 
 
 </urlset>
